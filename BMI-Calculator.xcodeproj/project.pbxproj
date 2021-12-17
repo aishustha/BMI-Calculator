@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61127003276D1AFC004EDAFE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61127002276D1AFC004EDAFE /* TableViewController.swift */; };
+		61127007276D2596004EDAFE /* TableUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61127006276D2596004EDAFE /* TableUICell.swift */; };
 		614A24A1276C198C0094B610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A24A0276C198C0094B610 /* AppDelegate.swift */; };
 		614A24A3276C198C0094B610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A24A2276C198C0094B610 /* SceneDelegate.swift */; };
 		614A24A5276C198C0094B610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A24A4276C198C0094B610 /* ViewController.swift */; };
 		614A24A8276C198C0094B610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614A24A6276C198C0094B610 /* Main.storyboard */; };
 		614A24AA276C198D0094B610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614A24A9276C198D0094B610 /* Assets.xcassets */; };
 		614A24AD276C198D0094B610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614A24AB276C198D0094B610 /* LaunchScreen.storyboard */; };
+		614A24B5276C506D0094B610 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A24B4276C506D0094B610 /* DataList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61127002276D1AFC004EDAFE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		61127006276D2596004EDAFE /* TableUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableUICell.swift; sourceTree = "<group>"; };
 		614A249D276C198C0094B610 /* BMI-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		614A24A0276C198C0094B610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		614A24A2276C198C0094B610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		614A24A9276C198D0094B610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		614A24AC276C198D0094B610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		614A24AE276C198D0094B610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		614A24B4276C506D0094B610 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				614A24A9276C198D0094B610 /* Assets.xcassets */,
 				614A24AB276C198D0094B610 /* LaunchScreen.storyboard */,
 				614A24AE276C198D0094B610 /* Info.plist */,
+				614A24B4276C506D0094B610 /* DataList.swift */,
+				61127002276D1AFC004EDAFE /* TableViewController.swift */,
+				61127006276D2596004EDAFE /* TableUICell.swift */,
 			);
 			path = "BMI-Calculator";
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				614A24A5276C198C0094B610 /* ViewController.swift in Sources */,
+				61127003276D1AFC004EDAFE /* TableViewController.swift in Sources */,
+				61127007276D2596004EDAFE /* TableUICell.swift in Sources */,
 				614A24A1276C198C0094B610 /* AppDelegate.swift in Sources */,
 				614A24A3276C198C0094B610 /* SceneDelegate.swift in Sources */,
+				614A24B5276C506D0094B610 /* DataList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

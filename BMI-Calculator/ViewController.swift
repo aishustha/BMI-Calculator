@@ -9,22 +9,47 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    
+    //username textfield
+    @IBOutlet weak var UsernameField: UITextField!
+    
+    //age textfield
+    @IBOutlet weak var AgeField: UITextField!
+    
+    //gender textfield
+    @IBOutlet weak var GenderField: UITextField!
+    
+    //height textfield
     @IBOutlet weak var HeightField: UITextField!
     
+    //weight textfield
     @IBOutlet weak var WeightField: UITextField!
     
+    //calculate button
     @IBOutlet weak var CalculateBtn: UIButton!
     
+    //save button
+    @IBOutlet weak var SaveBtn: UIButton!
+    
+    //result display
+    
+    //BMI Score Display
     @IBOutlet weak var ScoreLabel: UILabel!
     
+    //BMI Message Display
     @IBOutlet weak var MessageLabel: UILabel!
     
-    
+    //toggle
     @IBOutlet weak var ToggleValue: UISegmentedControl!
     
+    
+    //metric and imperial toggle
     @IBAction func ToggleChange(_ sender: UISegmentedControl) {
     }
     
+    //calculate BMI
     @IBAction func CalculateBMI(_ sender: UIButton) {
         self.view.endEditing(true)
 
@@ -34,7 +59,7 @@ class ViewController: UIViewController {
     
         var BMI = 0.0
 
-
+        //Toggle metric and imperial
         switch ToggleValue.selectedSegmentIndex {
           case 0:
           BMI = 703 * weight/(height*height);
@@ -47,8 +72,9 @@ class ViewController: UIViewController {
 
           default:
               break
-      }
-
+        }
+        
+        //BMI Message
 
         if BMI < 16 {
             MessageLabel.text = "Severe Thinness"
@@ -71,6 +97,12 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    //save button
+    @IBAction func StoreBtn(_ sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -78,4 +110,26 @@ class ViewController: UIViewController {
         ScoreLabel.text = ""
         MessageLabel.text = ""
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "redirect" {
+            
+            var dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm:ss"
+            
+            let date = Date()
+            let time = dateFormatter.string(from: date)
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            let dateString = dateFormatter.string(from: date)
+            var data = [Data(weight:WeightField.text!, bmi: ScoreLabel.text!, date: dateString)]
+            
+           
+        }
+    }
+
 }
+
+
