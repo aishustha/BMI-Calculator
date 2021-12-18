@@ -8,7 +8,6 @@
 import UIKit
 
 class TableUICell: UITableViewCell {
-
     @IBOutlet weak var WeightDataLabel: UILabel!
     
     @IBOutlet weak var BMIResultLabel: UILabel!

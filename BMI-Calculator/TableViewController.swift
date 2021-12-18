@@ -6,11 +6,20 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class TableViewController: UIViewController {
-
+    
+    var databaseHandle:FirebaseDatabase.DatabaseHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let firebaseDatabase = Database.database().reference().child("Data")
+        firebaseDatabase.observe(.value, with: {(snapshot) in
+            
+        })
 
         // Do any additional setup after loading the view.
     }
@@ -38,6 +47,13 @@ extension TableViewController:UITableViewDataSource {
         //animates a deselction of selected item then navigates to second page
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "data", sender: data[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            data.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
 

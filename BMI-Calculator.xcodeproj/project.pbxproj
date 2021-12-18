@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		61127003276D1AFC004EDAFE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61127002276D1AFC004EDAFE /* TableViewController.swift */; };
 		61127007276D2596004EDAFE /* TableUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61127006276D2596004EDAFE /* TableUICell.swift */; };
+		6113A3A1276D566A0037FC65 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6113A3A0276D566A0037FC65 /* FirebaseAuth */; };
+		6113A3A3276D566A0037FC65 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6113A3A2276D566A0037FC65 /* FirebaseDatabase */; };
+		6113A3AC276D593F0037FC65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6113A3AB276D593F0037FC65 /* GoogleService-Info.plist */; };
 		614A24A1276C198C0094B610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A24A0276C198C0094B610 /* AppDelegate.swift */; };
 		614A24A3276C198C0094B610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A24A2276C198C0094B610 /* SceneDelegate.swift */; };
 		614A24A5276C198C0094B610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A24A4276C198C0094B610 /* ViewController.swift */; };
@@ -21,6 +24,7 @@
 /* Begin PBXFileReference section */
 		61127002276D1AFC004EDAFE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		61127006276D2596004EDAFE /* TableUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableUICell.swift; sourceTree = "<group>"; };
+		6113A3AB276D593F0037FC65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		614A249D276C198C0094B610 /* BMI-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		614A24A0276C198C0094B610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		614A24A2276C198C0094B610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6113A3A3276D566A0037FC65 /* FirebaseDatabase in Frameworks */,
+				6113A3A1276D566A0037FC65 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +75,7 @@
 				614A24A9276C198D0094B610 /* Assets.xcassets */,
 				614A24AB276C198D0094B610 /* LaunchScreen.storyboard */,
 				614A24AE276C198D0094B610 /* Info.plist */,
+				6113A3AB276D593F0037FC65 /* GoogleService-Info.plist */,
 				614A24B4276C506D0094B610 /* DataList.swift */,
 				61127002276D1AFC004EDAFE /* TableViewController.swift */,
 				61127006276D2596004EDAFE /* TableUICell.swift */,
@@ -92,6 +99,10 @@
 			dependencies = (
 			);
 			name = "BMI-Calculator";
+			packageProductDependencies = (
+				6113A3A0276D566A0037FC65 /* FirebaseAuth */,
+				6113A3A2276D566A0037FC65 /* FirebaseDatabase */,
+			);
 			productName = "BMI-Calculator";
 			productReference = 614A249D276C198C0094B610 /* BMI-Calculator.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 614A2494276C198C0094B610;
+			packageReferences = (
+				6113A39F276D566A0037FC65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 614A249E276C198C0094B610 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				614A24AD276C198D0094B610 /* LaunchScreen.storyboard in Resources */,
+				6113A3AC276D593F0037FC65 /* GoogleService-Info.plist in Resources */,
 				614A24AA276C198D0094B610 /* Assets.xcassets in Resources */,
 				614A24A8276C198C0094B610 /* Main.storyboard in Resources */,
 			);
@@ -372,6 +387,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6113A39F276D566A0037FC65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6113A3A0276D566A0037FC65 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6113A39F276D566A0037FC65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6113A3A2276D566A0037FC65 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6113A39F276D566A0037FC65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 614A2495276C198C0094B610 /* Project object */;
 }

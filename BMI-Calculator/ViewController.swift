@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
+
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
-    
+    private let database = Database.database().reference()
     
     
     //username textfield
@@ -117,17 +120,24 @@ class ViewController: UIViewController {
         
         if segue.identifier == "redirect" {
             
-            var dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm:ss"
+            let displayDate = DateFormatter()
+            displayDate.dateFormat = "HH:mm:ss"
             
             let date = Date()
-            let time = dateFormatter.string(from: date)
-            dateFormatter.dateFormat = "dd-MM-yyyy"
-            let dateString = dateFormatter.string(from: date)
-            var data = [Data(weight:WeightField.text!, bmi: ScoreLabel.text!, date: dateString)]
             
+            displayDate.dateFormat = "dd-MM-yyyy"
+            let dateString = displayDate.string(from: date)
+        
+            //storing to database
+        
+            
+            let firebaseDatabase = database.child("data").setValue(["Username": UsernameField.text!, "Age": AgeField.text!,"Gender": GenderField.text!, "Weight": WeightField.text!, "BMI Score": ScoreLabel.text!, "BMI Message": MessageLabel.text!, "Date": dateString ])
+            
+            let data = [Data(weight:WeightField.text!, bmi: ScoreLabel.text!, date: dateString)]
+        
             let database = segue.destination as! TableViewController
             database.data = data
+            
            
         }
     }
