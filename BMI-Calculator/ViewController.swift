@@ -5,6 +5,11 @@
 //  Created by Aishwarya Shrestha on 16/12/2021.
 //
 
+
+//Author's Name - Aishwarya Shrestha
+//Student ID - 301138662
+//Date - 17/12/2021
+
 import UIKit
 import Firebase
 
@@ -36,6 +41,8 @@ class ViewController: UIViewController {
     //save button
     @IBOutlet weak var SaveBtn: UIButton!
     
+    //reset button
+    @IBOutlet weak var ResetBtn: UIButton!
     //result display
     
     //BMI Score Display
@@ -100,6 +107,19 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    //reset button
+    
+    @IBAction func Clear(_ sender: UIButton) {
+        UsernameField.text=""
+        AgeField.text=""
+        GenderField.text=""
+        WeightField.text=""
+        HeightField.text=""
+        
+        ScoreLabel.text = ""
+        MessageLabel.text = ""
+    }
     
     //save button
     @IBAction func StoreBtn(_ sender: UIButton) {

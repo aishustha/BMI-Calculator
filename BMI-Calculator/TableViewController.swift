@@ -5,21 +5,20 @@
 //  Created by Aishwarya Shrestha on 17/12/2021.
 //
 
+//Author's Name - Aishwarya Shrestha
+//Student ID - 301138662
+//Date - 17/12/2021
+
 import UIKit
 import Firebase
 import FirebaseDatabase
 
 class TableViewController: UIViewController {
     
-    var databaseHandle:FirebaseDatabase.DatabaseHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let firebaseDatabase = Database.database().reference().child("Data")
-        firebaseDatabase.observe(.value, with: {(snapshot) in
-            
-        })
 
         // Do any additional setup after loading the view.
     }
@@ -49,6 +48,8 @@ extension TableViewController:UITableViewDataSource {
         performSegue(withIdentifier: "data", sender: data[indexPath.row])
     }
     
+    
+    //adding delete gestures
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             data.remove(at: indexPath.row)

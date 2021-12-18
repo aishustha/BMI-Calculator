@@ -4,6 +4,10 @@
 //
 //  Created by Aishwarya Shrestha on 17/12/2021.
 //
+//Author's Name - Aishwarya Shrestha
+//Student ID - 301138662
+//Date - 17/12/2021
+
 
 import UIKit
 
